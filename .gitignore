@@ -1,13 +1,11 @@
 .DS_Store
 containers/
 emacs/
-fish/
 gatsby/
 gh/
 github-copilot/
 helix/
 homebrew/
-qBittorrent/
 tmux/plugins/
 zed/*.tmp*
 zed/embeddings
