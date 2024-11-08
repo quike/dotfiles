@@ -2,6 +2,4 @@
 
 A collection of reusable `dotfiles`.
 
-## Documentation
-
-[Index](docs/index.md)
+- Documentation [here](docs/index.md).
