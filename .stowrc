@@ -1,2 +1,9 @@
+--target=~
 --ignore=.stowrc
 --ignore=DS_Store
+--ignore=.git
+--ignore=.gitignore
+--ignore=.stow-local-ignore
+--ignore=setup.sh
+--ignore=README.md
+--ignore=docs/
