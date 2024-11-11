@@ -1,11 +1,3 @@
-// Zed settings
-//
-// For information on how to configure Zed, see the Zed
-// documentation: https://zed.dev/docs/configuring-zed
-//
-// To see all of Zed's default settings without changing your
-// custom settings, run the `open default settings` command
-// from the command palette or from `Zed` application menu.
 {
   "collaboration_panel": {
     "dock": "right"
@@ -13,7 +5,7 @@
   "project_panel": {
     "dock": "right"
   },
-  "theme": "Catppuccin Macchiato",
+  "theme": "Catppuccin Mocha",
   "vim_mode": true,
   "telemetry": {
     "diagnostics": false,
