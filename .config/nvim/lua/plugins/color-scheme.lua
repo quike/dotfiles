@@ -5,6 +5,8 @@ return {
     "catppuccin/nvim",
     config = function()
       require("catppuccin").setup({
+        flavour = "mocha",
+        default_integrations = true,
         integrations = {
           cmp = true,
           gitsigns = true,
@@ -24,15 +26,19 @@ return {
           telescope = true,
           treesitter = true,
           treesitter_context = true,
+          mini = {
+            enabled = true,
+            indentscope_color = "lavender",
+          },
         },
       })
 
       vim.cmd.colorscheme("catppuccin-mocha")
 
       -- Hide all semantic highlights until upstream issues are resolved (https://github.com/catppuccin/nvim/issues/480)
-      for _, group in ipairs(vim.fn.getcompletion("@lsp", "highlight")) do
-        vim.api.nvim_set_hl(0, group, {})
-      end
+      -- for _, group in ipairs(vim.fn.getcompletion("@lsp", "highlight")) do
+      --   vim.api.nvim_set_hl(0, group, {})
+      -- end
     end,
   },
   {

@@ -3,18 +3,6 @@ if true then
 end
 
 return {
-  -- catppuccin
-  -- {
-  -- "catppuccin/nvim",
-  -- name = "catppuccin",
-  -- enabled = true,
-  -- config = function()
-  -- require("catppuccin").setup({
-  -- flavour = "mocha", -- latte, frappe, macchiato, mocha
-  -- })
-  -- end,
-  -- },
-
   -- project
   {
     "ahmedkhalf/project.nvim",

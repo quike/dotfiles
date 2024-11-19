@@ -13,7 +13,6 @@ return {
       "?",
     },
     dependencies = {
-
       "catppuccin/nvim",
     },
     config = function()

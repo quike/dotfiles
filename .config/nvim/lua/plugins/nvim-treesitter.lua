@@ -1,3 +1,6 @@
+-- https://github.com/nvim-treesitter/nvim-treesitter
+-- Nvim Treesitter configurations and abstraction layer.
+
 return {
   {
     "nvim-treesitter/nvim-treesitter",
