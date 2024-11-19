@@ -1,7 +1,11 @@
+-- https://github.com/nvim-telescope/telescope.nvim
+-- Find, Filter, Preview, Pick. All lua, all the time.
+
 return {
   "nvim-telescope/telescope.nvim",
   dependencies = {
-    "nvim-lua/plenary.nvim",
+    { "nvim-lua/popup.nvim" },
+    { "nvim-lua/plenary.nvim" },
     {
       "nvim-telescope/telescope-fzf-native.nvim",
       build = "make",
@@ -9,7 +13,7 @@ return {
         require("telescope").load_extension("fzf")
       end,
     },
-    "nvim-tree/nvim-web-devicons",
+    { "nvim-tree/nvim-web-devicons" },
   },
   config = function()
     local telescope = require("telescope")
@@ -17,12 +21,18 @@ return {
 
     telescope.setup({
       defaults = {
+        border = true,
+        hl_result_eol = true,
         path_display = { "truncate " },
         mappings = {
           i = {
             ["<C-k>"] = actions.move_selection_previous, -- move to prev result
             ["<C-j>"] = actions.move_selection_next, -- move to next result
             ["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
+          },
+          n = {
+            ["<C-s>"] = actions.cycle_previewers_next,
+            ["<C-a>"] = actions.cycle_previewers_prev,
           },
         },
         file_ignore_patterns = { ".git/" },

@@ -51,11 +51,11 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 #                 See: https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
 [gaps]
 inner.horizontal = 10
-inner.vertical =   10
-outer.left =       10
-outer.bottom =     10
-outer.top =        10
-outer.right =      10
+inner.vertical = 10
+outer.left = 10
+outer.bottom = 10
+outer.top = 10
+outer.right = 10
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -96,11 +96,19 @@ alt-h = 'focus left'
 alt-j = 'focus down'
 alt-k = 'focus up'
 alt-l = 'focus right'
+#alt-left = 'focus left'
+#alt-down = 'focus down'
+#alt-up = 'focus up'
+#alt-right = 'focus right'
 
-alt-ctrl-left = 'focus left'
-alt-ctrl-down = 'focus down'
-alt-ctrl-up = 'focus up'
-alt-ctrl-right = 'focus right'
+alt-ctrl-h = 'focus-monitor left'
+alt-ctrl-j = 'focus-monitor down'
+alt-ctrl-k = 'focus-monitor up'
+alt-ctrl-l = 'focus-monitor right'
+alt-ctrl-left = 'focus-monitor left'
+alt-ctrl-down = 'focus-monitor down'
+alt-ctrl-up = 'focus-monitor up'
+alt-ctrl-right = 'focus-monitor right'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move
 alt-shift-h = 'move left'
@@ -192,7 +200,10 @@ alt-shift-semicolon = 'mode service'
 [mode.service.binding]
 esc = ['reload-config', 'mode main']
 r = ['flatten-workspace-tree', 'mode main'] # reset layout
-f = ['layout floating tiling', 'mode main'] # Toggle between floating and tiling layout
+f = [
+  'layout floating tiling',
+  'mode main',
+] # Toggle between floating and tiling layout
 backspace = ['close-all-windows-but-current', 'mode main']
 
 # sticky is not yet supported https://github.com/nikitabobko/AeroSpace/issues/2
