@@ -7,6 +7,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Reevaluate the prompt string each time it's displaying a prompt
 setopt prompt_subst
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+fpath+=~/.config/zsh/completions/
 autoload bashcompinit && bashcompinit
 autoload -Uz compinit
 compinit
