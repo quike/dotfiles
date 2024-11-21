@@ -5,7 +5,6 @@
 .config/gh/
 .config/github-copilot/
 .config/helix/
-.config/homebrew/
 .config/tmux/plugins/
 .config/zed/*.tmp*
 .config/zed/embeddings
