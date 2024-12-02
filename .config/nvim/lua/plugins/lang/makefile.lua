@@ -3,4 +3,10 @@ return {
   {
     "sopa0/telescope-makefile",
   },
+  { -- This plugin
+    "Zeioth/makeit.nvim",
+    cmd = { "MakeitOpen", "MakeitToggleResults", "MakeitRedo" },
+    dependencies = { "stevearc/overseer.nvim" },
+    opts = {},
+  },
 }

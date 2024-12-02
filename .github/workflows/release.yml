@@ -1,0 +1,23 @@
+name: push
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+jobs:
+  release:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    name: Release
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Release
+        uses: quike/action-semantic-release@v1.0.1
+        with:
+          token: ${{ secrets.GHTOKEN }}
