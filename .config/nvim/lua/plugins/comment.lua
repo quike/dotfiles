@@ -5,7 +5,7 @@
 return {
   {
     "numToStr/Comment.nvim",
-    event = { "BufEnter" },
+    --event = { "BufEnter" },
     dependencies = {
       "JoosepAlviste/nvim-ts-context-commentstring",
       config = function()

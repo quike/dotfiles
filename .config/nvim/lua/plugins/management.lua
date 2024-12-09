@@ -1,9 +1,6 @@
-if true then
-  return {}
-end
-
 return {
-  -- project
+  -- https://github.com/ahmedkhalf/project.nvim
+  -- The superior project management solution for neovim.
   {
     "ahmedkhalf/project.nvim",
     optional = true,

@@ -33,3 +33,8 @@ vim.keymap.set("n", "<leader>fl", ":let @+=expand('%') .. ':' .. line('.')<cr>",
 vim.keymap.set("n", "<leader>Y", function()
   vim.cmd("let @+ = expand('%')")
 end, { desc = "Copy relative file path to clipboard" })
+
+-- IDEs
+-- Map Command + S to save the file
+vim.keymap.set("n", "<D-s>", ":w<CR>", { noremap = true, desc = "Save File (Command + S)" })
+vim.keymap.set("i", "<D-s>", "<Esc>:w<CR>a", { noremap = true, desc = "Save File (Command + S) in Insert Mode" })
