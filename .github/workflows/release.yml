@@ -1,4 +1,4 @@
-name: push
+name: Push
 
 on:
   pull_request:
@@ -7,6 +7,8 @@ on:
   push:
     branches:
       - main
+
+permissions: read-all
 
 jobs:
   release:
@@ -18,7 +20,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Release
-        uses: quike/action-test@v1.0.1
+        uses: quike/action-semantic-release@v1.0.1
         with:
           token: ${{ secrets.GHTOKEN }}
           debug-mode: true
