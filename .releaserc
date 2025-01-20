@@ -2,9 +2,8 @@
   "branches": [
     "main"
   ],
+  "preset": "conventionalcommits",
   "plugins": [
-    "@semantic-release/release-notes-generator",
-    "@semantic-release/github",
     [
       "@semantic-release/commit-analyzer",
       {
@@ -12,12 +11,18 @@
       }
     ],
     [
+      "@semantic-release/release-notes-generator",
+      {
+        "preset": "conventionalcommits"
+      }
+    ],
+    "@semantic-release/github",
+    [
       "@semantic-release/exec",
       {
         "publishCmd": "echo 'VERSION=${nextRelease.version}' >> $GITHUB_ENV",
         "verifyReleaseCmd": "echo ${nextRelease.version} > .VERSION"
       }
     ]
-  ],
-  "preset": "conventionalcommits"
+  ]
 }
