@@ -17,6 +17,7 @@ set -gx EDITOR nvim
 
 fish_add_path /opt/homebrew/bin/
 fish_add_path /opt/homebrew/opt/mysql@8.4/bin
+fish_add_path "$HOME/Workspace/tools/maven/latest"
 
 alias v="nvim"
 alias n=v
