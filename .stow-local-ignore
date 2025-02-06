@@ -17,10 +17,9 @@ _darcs
 \.gitignore
 \.gitmodules
 \.github
-
 \.editorconfig
-
 \docs
+\renovate.json
 
 .+~          # emacs backup files
 \#.*\#       # emacs autosave files
@@ -28,4 +27,5 @@ _darcs
 ^/README.*
 ^/LICENSE.*
 ^/COPYING
+^/renovate.json
 

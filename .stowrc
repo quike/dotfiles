@@ -6,4 +6,7 @@
 --ignore=.stow-local-ignore
 --ignore=setup.sh
 --ignore=README.md
+--ignore=LICENSE
+--ignore=Makefile
+--ignore=renovate.json
 --ignore=docs/
