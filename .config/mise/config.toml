@@ -1,7 +1,7 @@
 [tools]
 node = "22"
 go = "1.23.6"
-erlang = "27.2.1"
+erlang = "27.2.2"
 java = "temurin-21.0.6+7.0.LTS"
 python = "3.13.1"
 elixir = "1.18"
