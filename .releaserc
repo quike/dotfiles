@@ -4,18 +4,14 @@
   ],
   "preset": "conventionalcommits",
   "plugins": [
-    [
-      "@semantic-release/commit-analyzer",
-      {
+    ["semantic-release-unsquash", {
+      "commitAnalyzerConfig": {
+        "preset": "conventionalcommits"
+      },
+      "notesGeneratorConfig": {
         "preset": "conventionalcommits"
       }
-    ],
-    [
-      "@semantic-release/release-notes-generator",
-      {
-        "preset": "conventionalcommits"
-      }
-    ],
+    }],
     "@semantic-release/github",
     [
       "@semantic-release/exec",
