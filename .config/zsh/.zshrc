@@ -1,6 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
@@ -48,8 +47,8 @@ plugins=(
   tmux
   vscode
   wd
-  zsh-completions
-  zsh-autosuggestions
+  zsh-completions 
+  zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -64,8 +63,6 @@ else
    export EDITOR='nvim'
 fi
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
 fpath=($fpath "$HOME/.zfunctions")
 
 # Load custom zshrc for extra
@@ -125,40 +122,25 @@ alias e="nvim"
 alias vim="nvim"
 alias cl='clear'
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
-
-source /Users/quike/.docker/init-zsh.sh || true # Added by Docker Desktop
-
-# tmuxifier
-eval "$(tmuxifier init -)"
+# navigation
+cx() { cd "$@" && l; }
+f() { echo "$(find . -type f -not -path '*/.*' | fzf)" | pbcopy }
+fv() { nvim "$(find . -type f -not -path '*/.*' | fzf)" }
 
 # starship
-export STARSHIP_CONFIG=~/.config/starship/starship.toml
+export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
 eval "$(starship init zsh)"
 
 #oh-my-posh
 #eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/base.toml)"
 
-
-# navigation
-cx() { cd "$@" && l; }
-# fcd() { cd "$(find . -type d -not -path '*/.*' | fzf)" && l; }
-f() { echo "$(find . -type f -not -path '*/.*' | fzf)" | pbcopy }
-fv() { nvim "$(find . -type f -not -path '*/.*' | fzf)" }
-
+# zoxide
 eval "$(zoxide init zsh)"
-# bun completions
-[ -s "/Users/quike/.bun/_bun" ] && source "/Users/quike/.bun/_bun"
 
 # bun
+[ -s "/Users/quike/.bun/_bun" ] && source "/Users/quike/.bun/_bun"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
-#source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-#source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-export PATH="/opt/homebrew/opt/mysql@8.4/bin:$PATH"
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/quike/.rd/bin:$PATH"
