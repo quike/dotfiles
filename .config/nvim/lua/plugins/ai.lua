@@ -1,3 +1,7 @@
+if true then
+  return {}
+end
+
 return {
   -- https://github.com/olimorris/codecompanion.nvim
   -- AI-powered coding, seamlessly in Neovim. Supports Anthropic, Copilot, Gemini, Ollama, OpenAI and xAI LLMs
