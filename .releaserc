@@ -2,15 +2,12 @@
   "branches": [
     "main"
   ],
-  "preset": "conventionalcommits",
   "plugins": [
-    ["semantic-release-unsquash", {
-      "commitAnalyzerConfig": {
-        "preset": "conventionalcommits"
-      },
-      "notesGeneratorConfig": {
-        "preset": "conventionalcommits"
-      }
+    ["@semantic-release/commit-analyzer", {
+      "preset": "conventionalcommits"
+    }],
+    ["@semantic-release/release-notes-generator",{
+      "preset": "conventionalcommits"
     }],
     "@semantic-release/github",
     [
@@ -19,6 +16,8 @@
         "publishCmd": "echo 'VERSION=${nextRelease.version}' >> $GITHUB_ENV",
         "verifyReleaseCmd": "echo ${nextRelease.version} > .VERSION"
       }
-    ]
-  ]
+    ],
+    "./src/index.js"
+  ],
+  "preset": "conventionalcommits"
 }

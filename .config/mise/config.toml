@@ -1,8 +1,8 @@
 [tools]
 node = "22"
-go = "1.23.6"
+go = "1.24.0"
 erlang = "27.2.2"
 java = "temurin-21.0.6+7.0.LTS"
 python = "3.13.2"
 elixir = "1.18"
-ruby = "3.4.1"
+ruby = "3.4.2"
