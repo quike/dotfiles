@@ -11,13 +11,15 @@ set -gx GO111MODULE auto
 set -gx PYTHON3_PATH /usr/local/opt/python/libexec/
 set -gx EMACSPATH "$HOME/.emacs.d"
 set -gx LATEX_BIN /Library/TeX/texbin
-set -gx AWS_PATH "$HOME/Workspace/tools/aws-cli"
-set -gx PATH "/opt/homebrew/bin $GOPATH/bin" "$CARGOPATH/bin" "$PYTHON3_PATH/bin" "$EMACSPATH/bin" "$LATEX_BIN" "$AWS_PATH" $PATH
+# set -gx AWS_PATH "$HOME/Workspace/tools/aws-cli"
+set -gx PATH "/opt/homebrew/bin $GOPATH/bin" "$CARGOPATH/bin" "$PYTHON3_PATH/bin" "$EMACSPATH/bin" "$LATEX_BIN" $PATH
 set -gx EDITOR nvim
 
 fish_add_path /opt/homebrew/bin/
 fish_add_path /opt/homebrew/opt/mysql@8.4/bin
 fish_add_path "$HOME/Workspace/tools/maven/latest"
+fish_add_path "$HOME/.local/bin"
+#fish_add_path "$AWS_PATH"
 
 alias v="nvim"
 alias n=v
