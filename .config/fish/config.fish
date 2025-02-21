@@ -18,7 +18,9 @@ set -gx EDITOR nvim
 fish_add_path /opt/homebrew/bin/
 fish_add_path /opt/homebrew/opt/mysql@8.4/bin
 fish_add_path "$HOME/Workspace/tools/maven/latest"
+fish_add_path "$HOME/Workspace/tools/flutter/latest/bin"
 fish_add_path "$HOME/.local/bin"
+
 #fish_add_path "$AWS_PATH"
 
 alias v="nvim"
@@ -27,6 +29,8 @@ alias z="zoxide"
 alias c="clear"
 alias dai="docker run -d --network=host -v open-webui:/app/backend/data -e OLLAMA_BASE_URL=http://127.0.0.1:11434 --name open-webui --restart always ghcr.io/open-webui/open-webui:0.4.2"
 alias lg="lazygit"
+alias ddt="docker rmi (docker images -f 'dangling=true' -q)"
+alias ddc="docker container prune && docker volume prune"
 
 starship init fish | source
 
