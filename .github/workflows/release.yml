@@ -20,7 +20,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Release
-        uses: quike/action-semantic-release@v1.2.6
+        uses: quike/action-semantic-release@v1.2.7
         with:
           token: ${{ secrets.GHTOKEN }}
           debug-mode: true
