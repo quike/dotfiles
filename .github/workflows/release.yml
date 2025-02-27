@@ -26,4 +26,4 @@ jobs:
           dry-run: false
           default-config-enabled: true
         env:
-          token: ${{ secrets.GHTOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GHTOKEN }}
