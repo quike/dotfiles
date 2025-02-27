@@ -22,7 +22,8 @@ jobs:
       - name: Release
         uses: quike/action-semantic-release@v2.0.1
         with:
-          token: ${{ secrets.GHTOKEN }}
           debug-mode: true
           dry-run: false
           default-config-enabled: true
+        env:
+          token: ${{ secrets.GHTOKEN }}
