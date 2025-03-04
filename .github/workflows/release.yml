@@ -8,9 +8,11 @@ on:
     branches:
       - main
 
+permissions: read-all
+
 jobs:
   workflow:
     permissions:
       contents: write
-    uses: quike/workflow-github/.github/workflows/release.yml@v1.0.3
+    uses: quike/workflow-github/.github/workflows/release.yml@v1
     secrets: inherit
