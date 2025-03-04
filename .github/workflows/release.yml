@@ -9,7 +9,7 @@ on:
       - main
 
 jobs:
-  release:
+  workflow:
     permissions:
       contents: write
     uses: quike/workflow-github/.github/workflows/release.yml@v1.0.1
