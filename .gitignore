@@ -2,6 +2,7 @@
 .idea/
 .config/containers/
 .config/emacs/
+.config/fish/fish_variables
 .config/gatsby/
 .config/gh/
 .config/github-copilot/
