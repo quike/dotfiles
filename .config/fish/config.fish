@@ -34,12 +34,19 @@ alias ddc="docker container prune && docker volume prune"
 
 starship init fish | source
 
-### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-set --export --prepend PATH "/Users/quike/.rd/bin"
-### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
-
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
 
 zoxide init fish | source
+
+# pnpm
+set -gx PNPM_HOME "/Users/quike/Library/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+set --export --prepend PATH "/Users/quike/.rd/bin"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
