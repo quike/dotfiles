@@ -27,6 +27,7 @@ alias v="nvim"
 alias n=v
 alias z="zoxide"
 alias c="clear"
+alias k="kubectl"
 alias dai="docker run -d --network=host -v open-webui:/app/backend/data -e OLLAMA_BASE_URL=http://127.0.0.1:11434 --name open-webui --restart always ghcr.io/open-webui/open-webui:0.4.2"
 alias lg="lazygit"
 alias ddt="docker rmi (docker images -f 'dangling=true' -q)"
@@ -41,9 +42,9 @@ set --export PATH $BUN_INSTALL/bin $PATH
 zoxide init fish | source
 
 # pnpm
-set -gx PNPM_HOME "/Users/quike/Library/pnpm"
+set -gx PNPM_HOME /Users/quike/Library/pnpm
 if not string match -q -- $PNPM_HOME $PATH
-  set -gx PATH "$PNPM_HOME" $PATH
+    set -gx PATH "$PNPM_HOME" $PATH
 end
 # pnpm end
 
