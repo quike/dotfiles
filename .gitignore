@@ -13,3 +13,5 @@
 .config/zed/conversations
 .config/zed/prompts
 .config/zellij/plugins/
+.config/omf/
+.config/nushell/
