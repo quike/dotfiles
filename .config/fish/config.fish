@@ -16,6 +16,7 @@ set -gx PATH "/opt/homebrew/bin $GOPATH/bin" "$CARGOPATH/bin" "$PYTHON3_PATH/bin
 set -gx EDITOR nvim
 
 fish_add_path /opt/homebrew/bin/
+fish_add_path /opt/homebrew/sbin/
 fish_add_path /opt/homebrew/opt/mysql@8.4/bin
 fish_add_path "$HOME/Workspace/tools/maven/latest"
 fish_add_path "$HOME/Workspace/tools/flutter/latest/bin"
