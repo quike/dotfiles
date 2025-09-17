@@ -1,11 +1,15 @@
 .DS_Store
 .idea/
+.config/aictl
 .config/containers/
+.config/crush/
 .config/emacs/
 .config/fish/fish_variables
 .config/gatsby/
 .config/gh/
+.config/gh-dash/
 .config/github-copilot/
+.config/glab-cli/
 .config/helix/
 .config/tmux/plugins/
 .config/zed/*.tmp*
@@ -15,3 +19,4 @@
 .config/zellij/plugins/
 .config/omf/
 .config/nushell/
+.config/yarn

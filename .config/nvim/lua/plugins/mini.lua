@@ -1,7 +1,7 @@
 return {
   --- Mini stuffs
   {
-    "echasnovski/mini.nvim",
+    "nvim-mini/mini.nvim",
     name = "mini",
     version = false,
     config = function()

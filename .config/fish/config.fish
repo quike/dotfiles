@@ -14,6 +14,7 @@ set -gx LATEX_BIN /Library/TeX/texbin
 # set -gx AWS_PATH "$HOME/Workspace/tools/aws-cli"
 set -gx PATH "/opt/homebrew/bin $GOPATH/bin" "$CARGOPATH/bin" "$PYTHON3_PATH/bin" "$EMACSPATH/bin" "$LATEX_BIN" $PATH
 set -gx EDITOR nvim
+set -gx DOCKER_DEFAULT_PLATFORM linux/arm64
 
 fish_add_path /opt/homebrew/bin/
 fish_add_path /opt/homebrew/sbin/

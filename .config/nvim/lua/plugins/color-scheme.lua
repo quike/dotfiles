@@ -3,42 +3,13 @@
 return {
   {
     "catppuccin/nvim",
+    name = "catppuccin",
+    priority = 1000,
     config = function()
       require("catppuccin").setup({
-        flavour = "mocha",
-        default_integrations = true,
-        integrations = {
-          cmp = true,
-          gitsigns = true,
-          harpoon = true,
-          illuminate = true,
-          indent_blankline = {
-            enabled = false,
-            scope_color = "sapphire",
-            colored_indent_levels = true,
-          },
-          mason = true,
-          native_lsp = { enabled = true },
-          notify = true,
-          nvimtree = true,
-          neotree = true,
-          symbols_outline = true,
-          telescope = true,
-          treesitter = true,
-          treesitter_context = true,
-          mini = {
-            enabled = true,
-            indentscope_color = "lavender",
-          },
-        },
+        flavour = "mocha", -- latte, frappe, macchiato, mocha
       })
-
-      vim.cmd.colorscheme("catppuccin-mocha")
-
-      -- Hide all semantic highlights until upstream issues are resolved (https://github.com/catppuccin/nvim/issues/480)
-      -- for _, group in ipairs(vim.fn.getcompletion("@lsp", "highlight")) do
-      --   vim.api.nvim_set_hl(0, group, {})
-      -- end
+      vim.cmd.colorscheme "catppuccin"
     end,
   },
   {
