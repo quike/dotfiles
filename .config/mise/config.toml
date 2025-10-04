@@ -1,5 +1,5 @@
 [tools]
-node = "22.19.0"
+node = "22.20.0"
 go = "1.25.1"
 erlang = "28.1"
 java = "temurin-25.0.0+36.0.LTS"
