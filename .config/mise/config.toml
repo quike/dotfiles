@@ -1,6 +1,6 @@
 [tools]
 node = "24.11.0"
-go = "1.25.2"
+go = "1.25.4"
 erlang = "28.1"
 java = "temurin-25.0.1+8.0.LTS"
 python = "3.14.0"
