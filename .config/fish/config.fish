@@ -52,4 +52,10 @@ end
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 set --export --prepend PATH "/Users/(whoami)/.rd/bin"
-### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+### MNAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+
+if status is-interactive
+    if type -q fastfetch
+        fastfetch
+    end
+end
