@@ -3,7 +3,7 @@ node = "24.15.0"
 go = "1.26.3"
 erlang = "28.5"
 java = "temurin-25.0.2+10.0.LTS"
-python = "3.14.3"
+python = "3.14.5"
 elixir = "1.18"
 ruby = "4.0.3"
 
