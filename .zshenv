@@ -1,2 +1,2 @@
-source .config/zsh/.zshenv
+source "$HOME/.config/zsh/.zshenv"
 . "$HOME/.cargo/env"

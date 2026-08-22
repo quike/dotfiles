@@ -1,0 +1,50 @@
+---
+version: 1
+
+settings:
+  logging:
+    level: debug
+    pretty: true # set to true for human-readable logs, false for json
+  working-dir: /tmp # optional default directory to run commands
+  max-concurrency: 2 # max 2 parallel programs at any time
+
+groups:
+  - name: brew-update
+    description: "Execute brew update"
+    command: "brew"
+    params: ["update"]
+
+  - name: brew-upgrade
+    description: "Execute brew upgrade"
+    command: "brew"
+    params: ["upgrade"]
+
+  - name: brew-cleanup
+    description: "Execute brew cleanup"
+    command: "brew"
+    params: ["cleanup"]
+
+  - name: omf-update
+    description: "Update Oh My Fish"
+    command: "omf"
+    params: ["update"]
+    shell: /opt/homebrew/bin/fish
+
+  - name: omf-reload
+    description: "Reload Oh My Fish"
+    command: "omf"
+    params: ["reload"]
+    shell: /opt/homebrew/bin/fish
+
+  - name: fisher-update
+    description: "Update Fisher"
+    command: "fisher"
+    params: ["update"]
+    shell: /opt/homebrew/bin/fish
+
+execution:
+  - group: ["brew-update"]
+  - group: ["brew-upgrade"]
+  - group: ["brew-cleanup"]
+  - group: ["omf-update", "fisher-update"]
+  - group: ["omf-reload"]
