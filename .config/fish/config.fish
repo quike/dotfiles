@@ -15,6 +15,7 @@ set -gx LATEX_BIN /Library/TeX/texbin
 set -gx PATH "/opt/homebrew/bin $GOPATH/bin" "$CARGOPATH/bin" "$PYTHON3_PATH/bin" "$EMACSPATH/bin" "$LATEX_BIN" $PATH
 set -gx EDITOR nvim
 set -gx DOCKER_DEFAULT_PLATFORM linux/arm64
+set -gx DO_NOT_TRACK 1
 
 fish_add_path /opt/homebrew/bin/
 fish_add_path /opt/homebrew/sbin/
@@ -28,6 +29,7 @@ fish_add_path "$HOME/.local/bin"
 alias v="nvim"
 alias n=v
 alias z="zoxide"
+alias zj="zellij"
 alias c="clear"
 alias k="kubectl"
 alias dai="docker run -d --network=host -v open-webui:/app/backend/data -e OLLAMA_BASE_URL=http://127.0.0.1:11434 --name open-webui --restart always ghcr.io/open-webui/open-webui:0.4.2"
@@ -58,4 +60,10 @@ if status is-interactive
     if type -q fastfetch
         fastfetch
     end
+end
+
+direnv hook fish | source
+
+if status is-interactive
+    atuin init fish | source
 end

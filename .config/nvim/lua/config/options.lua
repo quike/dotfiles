@@ -75,3 +75,4 @@ vim.opt.guicursor = {
 }
 
 vim.opt.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+vim.opt.exrc = true
