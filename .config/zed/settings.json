@@ -1,17 +1,116 @@
 {
+  "diff_view_style": "split",
+  "vim": {
+    "toggle_relative_line_numbers": true,
+  },
+  "toolbar": {
+    "code_actions": true,
+  },
+  "minimap": {
+    "show": "always",
+  },
+  "ui_font_weight": 350.0,
+  "show_edit_predictions": true,
+  "cli_default_open_behavior": "new_window",
+  "terminal": {
+    "font_size": 14.0,
+    "font_family": "JetBrainsMono Nerd Font",
+  },
+  "icon_theme": "Catppuccin Mocha",
+  "agent_servers": {
+    "claude-acp": {
+      "type": "registry",
+    },
+  },
+  "outline_panel": {
+    "dock": "right",
+  },
+  "agent": {
+    "dock": "left",
+    "favorite_models": [],
+    "model_parameters": [],
+  },
+  "git_panel": {
+    "tree_view": true,
+    "dock": "left",
+  },
   "collaboration_panel": {
-    "dock": "right"
+    "dock": "right",
   },
   "project_panel": {
-    "dock": "right"
+    "dock": "right",
   },
   "theme": "Catppuccin Mocha",
   "vim_mode": true,
   "telemetry": {
     "diagnostics": false,
-    "metrics": false
+    "metrics": false,
   },
   "ui_font_family": "JetBrainsMono Nerd Font",
-  "ui_font_size": 16,
-  "buffer_font_size": 16
+  "ui_font_size": 14.0,
+  "buffer_font_size": 14.0,
+  "file_types": {
+    "C++": ["c"],
+    "XML": [".svg"],
+    "Dockerfile": ["Dockerfile*"],
+    "Make": [".defs"],
+  },
+  "languages": {
+    "JavaScript": {
+      "formatter": {
+        "external": {
+          "command": "prettier",
+          "arguments": ["--stdin-filepath", "{buffer_path}"],
+        },
+      },
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true,
+      },
+    },
+    "TypeScript": {
+      "formatter": "prettier",
+    },
+    "TSX": {
+      "formatter": "prettier",
+    },
+    "JSON": {
+      "formatter": "prettier",
+    },
+  },
+  "lsp": {
+    "tailwindcss-language-server": {
+      "settings": {
+        "experimental": {
+          "classRegex": [
+            "\\.className\\s*[+]?=\\s*['\"]([^'\"]*)['\"]",
+            "\\.setAttributeNS\\(.*,\\s*['\"]class['\"],\\s*['\"]([^'\"]*)['\"]",
+            "\\.setAttribute\\(['\"]class['\"],\\s*['\"]([^'\"]*)['\"]",
+            "\\.classList\\.add\\(['\"]([^'\"]*)['\"]",
+            "\\.classList\\.remove\\(['\"]([^'\"]*)['\"]",
+            "\\.classList\\.toggle\\(['\"]([^'\"]*)['\"]",
+            "\\.classList\\.contains\\(['\"]([^'\"]*)['\"]",
+            "\\.classList\\.replace\\(\\s*['\"]([^'\"]*)['\"]",
+            "\\.classList\\.replace\\([^,)]+,\\s*['\"]([^'\"]*)['\"]",
+          ],
+        },
+      },
+    },
+    "eslint": {
+      "settings": {
+        "workingDirectory": {
+          "mode": "auto",
+        },
+        "problems": {
+          "shortenToSingleLine": true,
+        },
+        "rulesCustomizations": [
+          // set all eslint errors/warnings to show as warnings
+          { "rule": "*", "severity": "warn" },
+        ],
+        "codeActionOnSave": {
+          "rules": ["import/order"],
+        },
+      },
+    },
+  },
 }

@@ -11,7 +11,7 @@ return {
         flavour = "mocha", -- latte, frappe, macchiato, mocha
         auto_integrations = true,
       })
-      vim.cmd.colorscheme("catppuccin")
+      vim.cmd.colorscheme("catppuccin-nvim")
     end,
   },
   {
