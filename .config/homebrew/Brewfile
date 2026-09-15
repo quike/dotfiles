@@ -1,148 +1,280 @@
-tap "d12frosted/emacs-plus"
+tap "anomalyco/tap"
+tap "charmbracelet/tap"
 tap "derailed/k9s"
 tap "encoredev/tap"
 tap "felixkratz/formulae"
-tap "fluxcd/tap"
+tap "infisical/get-cli"
 tap "jandedobbeleer/oh-my-posh"
 tap "joshmedeski/sesh"
 tap "nikitabobko/tap"
-tap "vitorgalvao/tiny-scripts"
+tap "steipete/tap"
+# Search tool like grep, but optimized for programmers
 brew "ack"
+# Run your GitHub Actions locally
 brew "act"
-brew "argocd"
+# Cryptography and SSL/TLS Toolkit
 brew "openssl@3"
+# Download with resuming and segmented downloading
 brew "aria2"
+# Extendable version manager with support for Ruby, Node.js, Erlang & more
 brew "asdf"
+# Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Compiler infrastructure and toolchain library for WebAssembly
+brew "binaryen"
+# Parser generator
 brew "bison"
+# Get/set bluetooth power and discoverable state
 brew "blueutil"
+# Yet another cross-platform graphical process/system monitor
 brew "bottom"
+# Concurrent, cache-efficient, and Dockerfile-agnostic builder toolkit
+brew "buildkit"
+# Manage your dotfiles across multiple diverse machines, securely
+brew "chezmoi"
+# Hacker News in your terminal
+brew "circumflex"
+# Copy files from your terminal that actually paste into GUI apps
+brew "clippy"
+# Cloudflare Tunnel client (formerly Argo Tunnel)
+brew "cloudflared"
+# High performance code minimap generator
 brew "code-minimap"
+# Linux virtual machines
 brew "lima"
+# Container runtimes on MacOS (and Linux) with minimal setup
 brew "colima"
+# GNU multiple precision arithmetic library
 brew "gmp"
+# GNU File, Shell, and Text utilities
 brew "coreutils"
+# Get a file from an HTTP, HTTPS or FTP server
 brew "curl"
+# Load/unload environment variables based on $PWD
 brew "direnv"
+# Pack, ship and run any application as a lightweight container
+brew "docker"
+# Isolated development environments using Docker
+brew "docker-compose"
+# Platform keystore credential helper for Docker
+brew "docker-credential-helper"
+# Git for Data
 brew "dolt"
+# Maintain consistent coding style between multiple editors
 brew "editorconfig"
-brew "emacs"
+# Cloud-native high-performance edge/middle/service proxy
 brew "envoy"
+# Modern, maintained replacement for ls
 brew "eza"
+# Like neofetch, but much faster because written mostly in C
+brew "fastfetch"
+# Simple, fast and user-friendly alternative to find
 brew "fd"
+# SDL2 compatibility layer that uses SDL3 behind the scenes
+brew "sdl2-compat"
+# User-friendly command-line shell for UNIX-like operating systems
 brew "fish"
+# Command-line fuzzy finder written in Go
 brew "fzf"
+# GNU awk utility
 brew "gawk"
+# GitHub command-line tool
 brew "gh"
+# Distributed revision control system
 brew "git"
+# Syntax-highlighting pager for git and diff output
 brew "git-delta"
+# Open-source GitLab command-line tool
 brew "glab"
+# Render markdown on the CLI
 brew "glow"
+# GNU implementation of the famous stream editor
 brew "gnu-sed"
+# X.509 and CMS library
 brew "libksba"
+# Task is a task runner/build tool that aims to be simpler and easier to use
 brew "go-task"
+# Colorize logfiles and command output
 brew "grc"
+# Tool for glamorous shell scripts
 brew "gum"
+# Post-modern modal text editor
 brew "helix"
+# Kubernetes package manager
+brew "helm"
+# Improved top (interactive process viewer)
 brew "htop"
-brew "hugo"
+# User-friendly cURL replacement (command-line HTTP client)
+brew "httpie"
+# Run and Test HTTP Requests with plain text and curl
 brew "hurl"
+# Tools and libraries to manipulate images in select formats
 brew "imagemagick"
+# Manage your Java environment
 brew "jenv"
+# Lightweight and flexible command-line JSON processor
 brew "jq"
+# Handy way to save and run project-specific commands
+brew "just"
+# Little helper to run CNCF's k3s in Docker
 brew "k3d"
-brew "kubebuilder"
+# Kubernetes command-line interface
 brew "kubernetes-cli"
+# Lazier way to manage everything docker
 brew "lazydocker"
+# Simple terminal UI for git commands
 brew "lazygit"
+# Conversion library
 brew "libiconv"
+# Postgres C API library
 brew "libpq"
+# NaCl networking and cryptography library
 brew "libsodium"
+# C library for reading, creating, and modifying zip archives
 brew "libzip"
+# Command-line utility to interact with linkerd
 brew "linkerd"
+# LLM inference in C/C++
+brew "llama.cpp"
+# Powerful, lightweight programming language
 brew "lua"
+# Package manager for the Lua programming language
 brew "luarocks"
+# Text-to-HTML conversion tool
 brew "markdown"
+# Mac App Store command-line interface
 brew "mas"
+# Run a Kubernetes cluster locally
 brew "minikube"
+# Polyglot runtime manager (asdf rust clone)
 brew "mise"
+# Deep clean and optimize your Mac
+brew "mole"
+# Implementation of the Vulkan graphics and compute API on top of Metal
 brew "molten-vk"
-brew "mysql@8.4"
+# Interactive cheatsheet tool for the command-line
 brew "navi"
+# Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# Port scanning utility for large networks
 brew "nmap"
+# Modern shell for the GitHub era
 brew "nushell"
+# Manage multiple Node.js versions
 brew "nvm"
+# OCI Registry As Storage
+brew "oras"
+# Swiss-army knife of markup format conversion
 brew "pandoc"
+# Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Password manager
 brew "pass"
+# Package compiler and linker metadata toolkit
 brew "pkgconf"
+# Tool for managing OCI containers and pods
 brew "podman"
-brew "postgresql@14"
+# Terminal slideshow tool
 brew "presenterm"
+# Python version management
 brew "pyenv"
+# Ruby version manager
 brew "rbenv"
+# Generate C-based recognizers from regular expressions
 brew "re2c"
+# Persistent key-value database, with built-in net interface
 brew "redis"
+# Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# Powerful, clean, object-oriented scripting language
 brew "ruby"
-brew "sdl2"
+# Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
+# Launcher to analyze a project with SonarQube
+brew "sonar-scanner"
+# Editor of encrypted files
 brew "sops"
+# Cross-shell prompt for astronauts
 brew "starship"
+# Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
+# Open source continuous file synchronization application
 brew "syncthing"
+# Command-line interface for running and interacting with Temporal Server and UI
 brew "temporal"
+# Terminal multiplexer
 brew "tmux"
+# Network diagnostic tool, inspired by mtr
+brew "trippy"
+# Vulnerability scanner for container images, file systems, and Git repos
+brew "trivy"
+# Markup-based typesetting system
 brew "typst"
+# Command-line unarchiving tools supporting multiple formats
 brew "unar"
+# Creates fully functional virtual k8s cluster inside host k8s cluster's namespace
+brew "vcluster"
+# Your CLI home video recorder
+brew "vhs"
+# Vi 'workalike' with many additional features
 brew "vim"
+# Console-based network traffic monitor
 brew "vnstat"
+# Executes a program periodically, showing output fullscreen
+brew "watch"
+# Command-line client for WebSockets
+brew "websocat"
+# Internet file retriever
 brew "wget"
+# Tools for the WireGuard secure network tunnel
 brew "wireguard-tools"
+# Why is this running?
+brew "witr"
+# Binary diff, differential compression tools
 brew "xdelta"
+# Blazing fast terminal file manager written in Rust, based on async I/O
 brew "yazi"
+# Process YAML, JSON, XML, CSV and properties documents from the CLI
 brew "yq"
+# Pluggable terminal workspace, with terminal multiplexer as the base feature
 brew "zellij"
+# Programming language designed for robustness, optimality, and clarity
 brew "zig"
+# Shell extension to navigate your filesystem faster
 brew "zoxide"
+# Geo-scale, next-generation sharing platform built on top of OpenZiti
+brew "zrok"
+# UNIX shell (command interpreter)
 brew "zsh"
+# Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
-brew "derailed/k9s/k9s"
-brew "encoredev/tap/encore"
-brew "felixkratz/formulae/borders"
-brew "felixkratz/formulae/sketchybar"
-brew "fluxcd/tap/flux"
-brew "jandedobbeleer/oh-my-posh/oh-my-posh"
-brew "joshmedeski/sesh/sesh"
-brew "vitorgalvao/tiny-scripts/cask-repair"
 cask "aerospace"
-cask "chromium"
-cask "font-blex-mono-nerd-font"
-cask "font-cascadia-mono-nf"
-cask "font-fira-code"
-cask "font-fira-mono-nerd-font"
-cask "font-jetbrains-mono-nerd-font"
-cask "font-monaspace"
-cask "font-roboto-mono-nerd-font"
-cask "font-symbols-only-nerd-font"
-cask "font-ubuntu-mono-nerd-font"
+cask "codexbar"
+# Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
+# Menu bar manager
 cask "jordanbaird-ice"
+# Password manager app
 cask "keepassxc"
+# Open-source keystroke visualiser
 cask "keycastr"
+# GPU-based terminal emulator
 cask "kitty"
+# Privacy-first, open-source platform for knowledge sharing and management
 cask "logseq"
-cask "neovide"
+# Reverse proxy, secure introspectable tunnels to localhost
+cask "ngrok"
+# Colour picker for colours onscreen
 cask "pika"
+# Browse, manage, inspect containers and images
 cask "podman-desktop"
+# Instant messaging application focusing on security
 cask "signal"
+# PDF reader and note-taking application
 cask "skim"
+# Open-source code editor
 cask "visual-studio-code"
-cask "wezterm"
-mas "GarageBand", id: 682658836
 mas "GoPro Webcam", id: 6477835262
-mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
@@ -151,14 +283,17 @@ mas "Telegram", id: 747648890
 mas "The Unarchiver", id: 425424353
 mas "WhatsApp", id: 310633997
 mas "WireGuard", id: 1451685025
-mas "Xcode", id: 497799835
 vscode "angular.ng-template"
+vscode "anthropic.claude-code"
 vscode "astro-build.astro-vscode"
+vscode "biomejs.biome"
 vscode "bmalehorn.vscode-fish"
 vscode "bradlc.vscode-tailwindcss"
 vscode "catppuccin.catppuccin-vsc"
 vscode "catppuccin.catppuccin-vsc-icons"
+vscode "charliermarsh.ruff"
 vscode "codecov.codecov"
+vscode "continue.continue"
 vscode "dart-code.dart-code"
 vscode "dart-code.flutter"
 vscode "davidanson.vscode-markdownlint"
@@ -169,56 +304,78 @@ vscode "docker.docker"
 vscode "dotjoshjohnson.xml"
 vscode "editorconfig.editorconfig"
 vscode "esbenp.prettier-vscode"
+vscode "fill-labs.dependi"
 vscode "formulahendry.code-runner"
-vscode "github.copilot"
-vscode "github.copilot-chat"
+vscode "github.remotehub"
 vscode "github.vscode-github-actions"
 vscode "github.vscode-pull-request-github"
+vscode "gitlab.gitlab-workflow"
 vscode "golang.go"
+vscode "hashicorp.terraform"
 vscode "irongeek.vscode-env"
 vscode "jakebecker.elixir-ls"
 vscode "james-yu.latex-workshop"
 vscode "kdl-org.kdl"
 vscode "laravel.vscode-laravel"
+vscode "mads-hartmann.bash-ide-vscode"
 vscode "mattn.lisp"
+vscode "mermaidchart.vscode-mermaid-chart"
+vscode "mkhl.shfmt"
+vscode "ms-azuretools.vscode-azure-github-copilot"
+vscode "ms-azuretools.vscode-azure-mcp-server"
+vscode "ms-azuretools.vscode-azureresourcegroups"
+vscode "ms-azuretools.vscode-containers"
 vscode "ms-azuretools.vscode-docker"
 vscode "ms-kubernetes-tools.vscode-kubernetes-tools"
 vscode "ms-python.black-formatter"
 vscode "ms-python.debugpy"
+vscode "ms-python.pylint"
 vscode "ms-python.python"
 vscode "ms-python.vscode-pylance"
-vscode "ms-toolsai.jupyter"
-vscode "ms-toolsai.jupyter-keymap"
-vscode "ms-toolsai.jupyter-renderers"
-vscode "ms-toolsai.vscode-jupyter-cell-tags"
-vscode "ms-toolsai.vscode-jupyter-slideshow"
+vscode "ms-python.vscode-python-envs"
 vscode "ms-vscode-remote.remote-containers"
+vscode "ms-vscode-remote.remote-ssh"
+vscode "ms-vscode-remote.remote-ssh-edit"
+vscode "ms-vscode.azure-repos"
 vscode "ms-vscode.cmake-tools"
+vscode "ms-vscode.cpp-devtools"
 vscode "ms-vscode.cpptools"
 vscode "ms-vscode.cpptools-extension-pack"
 vscode "ms-vscode.cpptools-themes"
 vscode "ms-vscode.hexeditor"
 vscode "ms-vscode.makefile-tools"
+vscode "ms-vscode.remote-explorer"
+vscode "ms-vscode.remote-repositories"
+vscode "ms-vscode.remote-server"
+vscode "ms-windows-ai-studio.windows-ai-studio"
 vscode "msjsdiag.vscode-react-native"
+vscode "openai.chatgpt"
 vscode "orta.vscode-jest"
 vscode "oven.bun-vscode"
+vscode "patapscoai.remote"
+vscode "pomdtr.excalidraw-editor"
 vscode "redhat.java"
 vscode "redhat.vscode-xml"
 vscode "redhat.vscode-yaml"
+vscode "rogalmic.bash-debug"
+vscode "runem.lit-plugin"
 vscode "rust-lang.rust-analyzer"
 vscode "shopify.ruby-extensions-pack"
 vscode "shopify.ruby-lsp"
+vscode "skellock.just"
+vscode "sonarsource.sonarlint-vscode"
 vscode "sorbet.sorbet-vscode-extension"
+vscode "stylelint.vscode-stylelint"
 vscode "sumneko.lua"
 vscode "tamasfe.even-better-toml"
 vscode "task.vscode-task"
 vscode "timonwong.shellcheck"
-vscode "twxs.cmake"
 vscode "unifiedjs.vscode-mdx"
+vscode "usernamehw.errorlens"
 vscode "vadimcn.vscode-lldb"
-vscode "visualstudioexptteam.intellicode-api-usage-examples"
-vscode "visualstudioexptteam.vscodeintellicode"
 vscode "vitest.explorer"
+vscode "vmware.vscode-spring-boot"
+vscode "vscjava.migrate-java-to-azure"
 vscode "vscjava.vscode-gradle"
 vscode "vscjava.vscode-java-debug"
 vscode "vscjava.vscode-java-dependency"
@@ -226,4 +383,31 @@ vscode "vscjava.vscode-java-pack"
 vscode "vscjava.vscode-java-test"
 vscode "vscjava.vscode-lombok"
 vscode "vscjava.vscode-maven"
+vscode "vscjava.vscode-spring-boot-dashboard"
+vscode "vscodevim.vim"
 vscode "wholroyd.jinja"
+go "golang.org/x/tools/cmd/callgraph"
+go "github.com/go-delve/delve/cmd/dlv"
+go "github.com/davidrjenni/reftools/cmd/fillswitch"
+go "github.com/onsi/ginkgo/v2/ginkgo"
+go "cmd/go"
+go "github.com/abice/go-enum"
+go "cmd/gofmt"
+go "mvdan.cc/gofumpt"
+go "golang.org/x/tools/cmd/goimports"
+go "github.com/twpayne/go-jsonstruct/v3/cmd/gojsonstruct"
+go "github.com/golangci/golangci-lint/v2/cmd/golangci-lint"
+go "github.com/fatih/gomodifytags"
+go "github.com/abenz1267/gomvp"
+go "golang.org/x/tools/cmd/gonew"
+go "golang.org/x/tools/gopls"
+go "github.com/cweill/gotests/gotests"
+go "gotest.tools/gotestsum"
+go "golang.org/x/vuln/cmd/govulncheck"
+go "github.com/koron/iferr"
+go "github.com/josharian/impl"
+go "github.com/tmc/json-to-struct"
+go "go.uber.org/mock/mockgen"
+go "github.com/kyoh86/richgo"
+cargo "cbindgen"
+npm "corepack"
