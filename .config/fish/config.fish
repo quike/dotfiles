@@ -12,7 +12,7 @@ set -gx PYTHON3_PATH /usr/local/opt/python/libexec/
 set -gx EMACSPATH "$HOME/.emacs.d"
 set -gx LATEX_BIN /Library/TeX/texbin
 # set -gx AWS_PATH "$HOME/Workspace/tools/aws-cli"
-set -gx PATH "/opt/homebrew/bin $GOPATH/bin" "$CARGOPATH/bin" "$PYTHON3_PATH/bin" "$EMACSPATH/bin" "$LATEX_BIN" $PATH
+set -gx PATH "/opt/homebrew/bin" "$GOPATH/bin" "$CARGOPATH/bin" "$PYTHON3_PATH/bin" "$EMACSPATH/bin" "$LATEX_BIN" $PATH
 set -gx EDITOR nvim
 set -gx DOCKER_DEFAULT_PLATFORM linux/arm64
 set -gx DO_NOT_TRACK 1
@@ -46,15 +46,15 @@ set --export PATH $BUN_INSTALL/bin $PATH
 zoxide init fish | source
 
 # pnpm
-set -gx PNPM_HOME "/Users/(whoami)/Library/pnpm"
+set -gx PNPM_HOME "$HOME/Library/pnpm"
 if not string match -q -- $PNPM_HOME $PATH
     set -gx PATH "$PNPM_HOME" $PATH
 end
 # pnpm end
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-set --export --prepend PATH "/Users/(whoami)/.rd/bin"
-### MNAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+set --export --prepend PATH "$HOME/.rd/bin"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
 
 if status is-interactive
     if type -q fastfetch
