@@ -8,16 +8,16 @@ end
 set -gx GOPATH "$HOME/.go"
 set -gx CARGOPATH "$HOME/.cargo"
 set -gx GO111MODULE auto
-set -gx PYTHON3_PATH /usr/local/opt/python/libexec/
+set -gx PYTHON3_PATH /usr/local/opt/python/libexec
 set -gx EMACSPATH "$HOME/.emacs.d"
 set -gx LATEX_BIN /Library/TeX/texbin
 # set -gx AWS_PATH "$HOME/Workspace/tools/aws-cli"
-set -gx PATH "/opt/homebrew/bin" "$GOPATH/bin" "$CARGOPATH/bin" "$PYTHON3_PATH/bin" "$EMACSPATH/bin" "$LATEX_BIN" $PATH
+# $CARGOPATH/bin is added by conf.d/rustup.fish
+set -gx PATH "/opt/homebrew/bin" "$GOPATH/bin" "$PYTHON3_PATH/bin" "$EMACSPATH/bin" "$LATEX_BIN" $PATH
 set -gx EDITOR nvim
 set -gx DOCKER_DEFAULT_PLATFORM linux/arm64
 set -gx DO_NOT_TRACK 1
 
-fish_add_path /opt/homebrew/bin/
 fish_add_path /opt/homebrew/sbin/
 fish_add_path /opt/homebrew/opt/mysql@8.4/bin
 fish_add_path "$HOME/Workspace/tools/maven/latest"
@@ -28,7 +28,6 @@ fish_add_path "$HOME/.local/bin"
 
 alias v="nvim"
 alias n=v
-alias z="zoxide"
 alias zj="zellij"
 alias c="clear"
 alias k="kubectl"
