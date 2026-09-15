@@ -1,0 +1,69 @@
+name: Lint Codebase
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: ${{ github.ref }}-${{ github.workflow }}
+  cancel-in-progress: true
+
+permissions: {}
+
+jobs:
+  lint:
+    name: Lint Codebase
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+      issues: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout
+        id: checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Lint Codebase
+        id: mega-linter
+        uses: oxsecurity/megalinter@9949bad031045f366be2467e00e8371a7328a2e2 # v10
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VALIDATE_ALL_CODEBASE: true
+          # v8r itself validates JSON, YAML and TOML, but MegaLinter scopes it
+          # to .json by default. Adding .toml is what gives TOML coverage
+          # without a separate job.
+          JSON_V8R_FILE_EXTENSIONS: "[\".json\",\".toml\"]"
+          # .config/zed holds JSONC (comments, trailing commas), which strict
+          # JSON parsers reject.
+          JSON_FILTER_REGEX_EXCLUDE: (^|/)\.config/zed/
+          # Third-party completions, the vendored fisher plugin manager,
+          # lockfiles and colour themes.
+          FILTER_REGEX_EXCLUDE: (^|/)\.config/(fish/completions/|fish/functions/fisher\.fish|nvim/lazy-lock\.json|bat/|zellij/)|\.(theme|tmTheme|webp)$
+          # luacheck reports `vim` as an undefined global across the nvim
+          # config; stylua is configured by .config/nvim/stylua.toml.
+          DISABLE_LINTERS: LUA_LUACHECK
+          DISABLE: COPYPASTE,SPELL
+
+      # fish is the one format MegaLinter has no linter for.
+      - name: Validate fish
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq fish
+          rc=0
+          count=0
+          while IFS= read -r file; do
+            case "$file" in
+              .config/fish/completions/*|.config/fish/functions/fisher.fish) continue ;;
+            esac
+            count=$((count + 1))
+            fish --no-execute "$file" || rc=1
+          done < <(git ls-files '*.fish')
+          echo "checked $count fish files"
+          exit $rc
