@@ -36,13 +36,13 @@ alias lg="lazygit"
 alias ddt="docker rmi (docker images -f 'dangling=true' -q)"
 alias ddc="docker container prune && docker volume prune"
 
-starship init fish | source
+type -q starship; and starship init fish | source
 
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
 
-zoxide init fish | source
+type -q zoxide; and zoxide init fish | source
 
 # pnpm
 set -gx PNPM_HOME "$HOME/Library/pnpm"
@@ -61,8 +61,8 @@ if status is-interactive
     end
 end
 
-direnv hook fish | source
+type -q direnv; and direnv hook fish | source
 
 if status is-interactive
-    atuin init fish | source
+    type -q atuin; and atuin init fish | source
 end
