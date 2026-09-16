@@ -10,13 +10,13 @@ return {
     },
     config = function()
       require("go").setup()
-      local lspconfig = require('lspconfig')
+      local lspconfig = require("lspconfig")
 
-      lspconfig.gopls.setup {
+      lspconfig.gopls.setup({
         cmd = { "gopls" },
         filetypes = { "go", "gomod", "gowork", "gotmpl" },
         root_dir = lspconfig.util.root_pattern("go.work", "go.mod", ".git"),
-      }
+      })
     end,
     event = { "CmdlineEnter" },
     ft = { "go", "gomod" },

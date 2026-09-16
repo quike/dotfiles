@@ -1,31 +1,41 @@
-# Comments and blank lines are allowed.
+# GNU Stow ignore list for this package.
+#
+# Patterns without a "/" match the basename, anchored as ^(pattern)$.
+# Patterns with a "/" match the path, anchored as (^|/)(pattern)(/|$),
+# so "^/name" pins an entry to the repository root.
+#
+# This file replaces Stow's built-in default ignore list, so the VCS and
+# editor-cruft defaults have to be repeated here.
 
+# Version control
 RCS
-.+,v
-
 CVS
-\.\#.+       # CVS conflict files / emacs lock files
-\.cvsignore
-
-\DS_Store
-
-\.svn
 _darcs
-\.hg
-
 \.git
 \.gitignore
 \.gitmodules
+\.gitattributes
 \.github
+\.hg
+\.svn
+\.cvsignore
+\.\#.+
+.+,v
+
+# Editor and OS cruft
+.+~
+\#.*\#
+\.DS_Store
+\.idea
+\.claude
+
+# Repository tooling: belongs in the repo, never in $HOME
 \.editorconfig
-\docs
-\renovate.json
-
-.+~          # emacs backup files
-\#.*\#       # emacs autosave files
-
+\.releaserc
+\.stowrc
+^/docs
+^/renovate\.json
+^/setup\.sh
 ^/README.*
 ^/LICENSE.*
 ^/COPYING
-^/renovate.json
-

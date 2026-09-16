@@ -1,5 +1,5 @@
-source .config/zsh/.zshrc
+source "$HOME/.config/zsh/.zshrc"
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="/Users/$USER/.rd/bin:$PATH"
+export PATH="$HOME/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
