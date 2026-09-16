@@ -47,13 +47,30 @@ jobs:
           # Third-party completions, the vendored fisher plugin manager,
           # lockfiles and colour themes.
           FILTER_REGEX_EXCLUDE: (^|/)\.config/(fish/completions/|fish/functions/fisher\.fish|nvim/lazy-lock\.json|bat/|zellij/)|\.(theme|tmTheme|webp)$
+          # Vendored Apache licence text and the upstream yazi theme. Excluded
+          # here rather than globally so v8r still validates the theme's TOML.
+          EDITORCONFIG_EDITORCONFIG_CHECKER_FILTER_REGEX_EXCLUDE: (^|/)\.config/(nvim/LICENSE|yazi/theme\.toml)$
+          # A set GITHUB_TOKEN puts zizmor in online mode, but MegaLinter
+          # filters the value, so its GitHub API calls 401. Run it offline.
+          ZIZMOR_OFFLINE: true
           # luacheck reports `vim` as an undefined global across the nvim
           # config; stylua is configured by .config/nvim/stylua.toml.
-          DISABLE_LINTERS: LUA_LUACHECK
+          # The SBOM and vulnerability scanners cost ~105s and have nothing to
+          # scan: this repository declares no dependencies.
+          DISABLE_LINTERS: >-
+            LUA_LUACHECK,
+            REPOSITORY_CHECKOV,
+            REPOSITORY_GRYPE,
+            REPOSITORY_OSV_SCANNER,
+            REPOSITORY_SYFT,
+            REPOSITORY_TRIVY,
+            REPOSITORY_TRIVY_SBOM
           DISABLE: COPYPASTE,SPELL
 
-      # fish is the one format MegaLinter has no linter for.
+      # fish is the one format MegaLinter has no linter for. Runs even when
+      # MegaLinter fails, so a red run still reports every problem at once.
       - name: Validate fish
+        if: ${{ !cancelled() && steps.checkout.conclusion == 'success' }}
         run: |
           sudo apt-get update -qq && sudo apt-get install -y -qq fish
           rc=0
