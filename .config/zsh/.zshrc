@@ -47,7 +47,7 @@ plugins=(
   tmux
   vscode
   wd
-  zsh-completions 
+  zsh-completions
   zsh-syntax-highlighting
 )
 
@@ -58,9 +58,9 @@ export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-   export EDITOR='vim'
+  export EDITOR='vim'
 else
-   export EDITOR='nvim'
+  export EDITOR='nvim'
 fi
 
 fpath=($fpath "$HOME/.zfunctions")
