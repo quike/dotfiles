@@ -14,5 +14,8 @@ jobs:
   workflow:
     permissions:
       contents: write
-    uses: quike/workflow-github/.github/workflows/release.yml@15a6f8baec0dea98eb96de5766c595404ae3424d # v1
+    # The called workflow needs secrets.GHTOKEN but does not declare it under
+    # workflow_call.secrets, so it cannot be passed explicitly and inherit is
+    # the only option. Declare it there to narrow this.
+    uses: quike/workflow-github/.github/workflows/release.yml@15a6f8baec0dea98eb96de5766c595404ae3424d # v1 # zizmor: ignore[secrets-inherit]
     secrets: inherit

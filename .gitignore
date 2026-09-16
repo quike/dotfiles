@@ -1,6 +1,8 @@
 .DS_Store
 .idea/
+.claude/
 .config/aictl
+.config/atuin/atuin-receipt.json
 .config/containers/
 .config/crush/
 .config/emacs/

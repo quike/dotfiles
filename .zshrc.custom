@@ -1,1 +1,1 @@
-source .config/zsh/.zshrc.custom
+[ -f "$HOME/.config/zsh/.zshrc.custom" ] && source "$HOME/.config/zsh/.zshrc.custom"
