@@ -33,7 +33,10 @@ jobs:
 
       - name: Lint Codebase
         id: mega-linter
-        uses: oxsecurity/megalinter@9949bad031045f366be2467e00e8371a7328a2e2 # v10
+        # The cupcake flavor is roughly half the size of the full image and
+        # carries every linter this repository uses except Lua, which runs as
+        # its own step below.
+        uses: oxsecurity/megalinter/flavors/cupcake@9949bad031045f366be2467e00e8371a7328a2e2 # v10
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_ALL_CODEBASE: true
@@ -53,12 +56,9 @@ jobs:
           # A set GITHUB_TOKEN puts zizmor in online mode, but MegaLinter
           # filters the value, so its GitHub API calls 401. Run it offline.
           ZIZMOR_OFFLINE: true
-          # luacheck reports `vim` as an undefined global across the nvim
-          # config; stylua is configured by .config/nvim/stylua.toml.
           # The SBOM and vulnerability scanners cost ~105s and have nothing to
           # scan: this repository declares no dependencies.
           DISABLE_LINTERS: >-
-            LUA_LUACHECK,
             REPOSITORY_CHECKOV,
             REPOSITORY_GRYPE,
             REPOSITORY_OSV_SCANNER,
@@ -66,6 +66,16 @@ jobs:
             REPOSITORY_TRIVY,
             REPOSITORY_TRIVY_SBOM
           DISABLE: COPYPASTE,SPELL
+
+      # No MegaLinter flavor ships a Lua linter, so stylua runs on its own
+      # against the same .config/nvim/stylua.toml the editor uses.
+      - name: Check Lua formatting
+        if: ${{ !cancelled() && steps.checkout.conclusion == 'success' }}
+        uses: JohnnyMorganz/stylua-action@76fd70c03e6340ceaf673366712db9b20560b402 # v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          version: 2.5.2
+          args: --check --config-path .config/nvim/stylua.toml .config/nvim
 
       # fish is the one format MegaLinter has no linter for. Runs even when
       # MegaLinter fails, so a red run still reports every problem at once.
