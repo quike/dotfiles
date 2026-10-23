@@ -5,7 +5,7 @@ erlang = "29.1.2"
 java = "temurin-25.0.5+8.0.LTS"
 python = "3.15.1"
 elixir = "1.18"
-ruby = "4.0.8"
+ruby = "4.0.9"
 
 [settings]
 idiomatic_version_file_enable_tools = ["ruby"]
