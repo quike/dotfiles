@@ -1,10 +1,9 @@
-tap "anomalyco/tap"
-tap "charmbracelet/tap"
+tap "charmbracelet/tap", trusted: true
 tap "derailed/k9s"
 tap "encoredev/tap"
 tap "felixkratz/formulae"
 tap "infisical/get-cli"
-tap "jandedobbeleer/oh-my-posh"
+tap "jandedobbeleer/oh-my-posh", trusted: { formulae: ["oh-my-posh"] }
 tap "joshmedeski/sesh"
 tap "nikitabobko/tap"
 tap "steipete/tap"
@@ -12,12 +11,12 @@ tap "steipete/tap"
 brew "ack"
 # Run your GitHub Actions locally
 brew "act"
-# Cryptography and SSL/TLS Toolkit
-brew "openssl@3"
 # Download with resuming and segmented downloading
 brew "aria2"
 # Extendable version manager with support for Ruby, Node.js, Erlang & more
 brew "asdf"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@3"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # Compiler infrastructure and toolchain library for WebAssembly
@@ -78,6 +77,8 @@ brew "fish"
 brew "fzf"
 # GNU awk utility
 brew "gawk"
+# TIFF library and utilities
+brew "libtiff"
 # GitHub command-line tool
 brew "gh"
 # Distributed revision control system
@@ -94,10 +95,10 @@ brew "gnu-sed"
 brew "libksba"
 # Task is a task runner/build tool that aims to be simpler and easier to use
 brew "go-task"
-# Colorize logfiles and command output
-brew "grc"
 # Tool for glamorous shell scripts
 brew "gum"
+# CLI for headscale, an open-source implementation of the Tailscale control server
+brew "headscale-cli"
 # Post-modern modal text editor
 brew "helix"
 # Kubernetes package manager
@@ -106,12 +107,16 @@ brew "helm"
 brew "htop"
 # User-friendly cURL replacement (command-line HTTP client)
 brew "httpie"
+# Configurable static site generator
+brew "hugo"
 # Run and Test HTTP Requests with plain text and curl
 brew "hurl"
 # Tools and libraries to manipulate images in select formats
 brew "imagemagick"
 # Manage your Java environment
 brew "jenv"
+# Git-compatible distributed version control system
+brew "jj"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # Handy way to save and run project-specific commands
@@ -178,20 +183,14 @@ brew "podman"
 brew "presenterm"
 # Python version management
 brew "pyenv"
-# Ruby version manager
-brew "rbenv"
 # Generate C-based recognizers from regular expressions
 brew "re2c"
 # Persistent key-value database, with built-in net interface
 brew "redis"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
-# Powerful, clean, object-oriented scripting language
-brew "ruby"
 # Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
-# Launcher to analyze a project with SonarQube
-brew "sonar-scanner"
 # Editor of encrypted files
 brew "sops"
 # Cross-shell prompt for astronauts
@@ -212,8 +211,6 @@ brew "trivy"
 brew "typst"
 # Command-line unarchiving tools supporting multiple formats
 brew "unar"
-# Creates fully functional virtual k8s cluster inside host k8s cluster's namespace
-brew "vcluster"
 # Your CLI home video recorder
 brew "vhs"
 # Vi 'workalike' with many additional features
@@ -248,8 +245,21 @@ brew "zrok"
 brew "zsh"
 # Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
-cask "aerospace"
-cask "codexbar"
+# AeroSpace is an i3-like tiling window manager for macOS
+cask "nikitabobko/tap/aerospace", trusted: true
+# E-books management software
+cask "calibre"
+# Native GUI for Homebrew casks
+cask "caskhub"
+cask "font-blex-mono-nerd-font"
+cask "font-cascadia-mono-nf"
+cask "font-fira-code"
+cask "font-fira-mono-nerd-font"
+cask "font-jetbrains-mono-nerd-font"
+cask "font-monaspace"
+cask "font-roboto-mono-nerd-font"
+cask "font-symbols-only-nerd-font"
+cask "font-ubuntu-mono-nerd-font"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
 # Menu bar manager
@@ -260,10 +270,6 @@ cask "keepassxc"
 cask "keycastr"
 # GPU-based terminal emulator
 cask "kitty"
-# Privacy-first, open-source platform for knowledge sharing and management
-cask "logseq"
-# Reverse proxy, secure introspectable tunnels to localhost
-cask "ngrok"
 # Colour picker for colours onscreen
 cask "pika"
 # Browse, manage, inspect containers and images
@@ -274,6 +280,10 @@ cask "signal"
 cask "skim"
 # Open-source code editor
 cask "visual-studio-code"
+# Menu bar toolkit with keep-awake, system monitor and volume mixer
+cask "vorssaint"
+mas "DuckDuckGo Privacy for Safari", id: 1482920575
+mas "GarageBand", id: 682658836
 mas "GoPro Webcam", id: 6477835262
 mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
@@ -410,4 +420,5 @@ go "github.com/tmc/json-to-struct"
 go "go.uber.org/mock/mockgen"
 go "github.com/kyoh86/richgo"
 cargo "cbindgen"
+cargo "rage"
 npm "corepack"
