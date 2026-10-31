@@ -123,8 +123,6 @@ brew "jq"
 brew "just"
 # Little helper to run CNCF's k3s in Docker
 brew "k3d"
-# SDK for building Kubernetes APIs using CRDs
-brew "kubebuilder"
 # Kubernetes command-line interface
 brew "kubernetes-cli"
 # Lazier way to manage everything docker
