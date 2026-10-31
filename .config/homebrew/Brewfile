@@ -1,5 +1,4 @@
-tap "anomalyco/tap"
-tap "charmbracelet/tap"
+tap "charmbracelet/tap", trusted: true
 tap "derailed/k9s"
 tap "encoredev/tap"
 tap "felixkratz/formulae"
